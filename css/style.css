@@ -27,6 +27,37 @@ body {
 }
 
 /* -------------------------------------------------------- */
+/* ANIMATION FUNCTIONS FOR THE WEBSITE */
+/* -------------------------------------------------------- */
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    /* 80% {
+        transform: translateX(5px);
+    } */
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* -------------------------------------------------------- */
 /* HEADER - HERO SECTION */
 /* -------------------------------------------------------- */
 
@@ -68,6 +99,10 @@ body {
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+
+    /* To hide the backpart of an element when tranforming  */
+    /* Sometimes makes the animations shaky. - To fix this */
+    backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -75,6 +110,14 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+
+    /* -- Animations -- */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+
+    /* animation-timing-function: ease; Timing function to change the duration of time for different aspects of the funciton.*/
+    /* animation-iteration-count: 3;  Number of times of animation */
+    /* animation-delay: 2s; Delay in animation start*/
 }
 
 .heading-primary-sub {
@@ -82,15 +125,7 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
-}
 
-/* Animation for the header  */
-@keyframes moveInLeft {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+    /* -- Animations -- */
+    animation: moveInRight 1s ease-out;
 }
