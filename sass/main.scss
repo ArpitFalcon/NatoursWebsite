@@ -1,15 +1,13 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
 /* -------------------------------------------------------- */
 /* BASIC FOR THE WEBSITE */
 /* -------------------------------------------------------- */
+
+// Variable -
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-grey-dark: #777;
 
 *,
 *::after,
@@ -29,7 +27,7 @@ body {
     /* font-size: 16px; */
     font-weight: 400;
     line-height: 1.7;
-    color: #777;
+    color: $color-grey-dark;
     padding: 3rem;
     box-sizing: border-box;
 }
@@ -83,7 +81,11 @@ body {
 
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right, #7ed56fd3, #28b485d3),
+    background-image: linear-gradient(
+            to right,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)
+        ),
         url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
@@ -186,7 +188,7 @@ body {
 
 .btn--white {
     background-color: #fff;
-    color: #777;
+    color: $color-grey-dark;
 }
 
 .btn::after {

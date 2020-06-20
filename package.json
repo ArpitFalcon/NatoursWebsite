@@ -1,23 +1,24 @@
 {
-  "name": "natourswebsite",
-  "version": "1.0.0",
-  "description": "Landing page for natures",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ArpitFalcon/NatoursWebsite.git"
-  },
-  "author": "Arpit",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ArpitFalcon/NatoursWebsite/issues"
-  },
-  "homepage": "https://github.com/ArpitFalcon/NatoursWebsite#readme",
-  "dependencies": {},
-  "devDependencies": {
-    "node-sass": "^4.14.1"
-  }
+    "name": "natourswebsite",
+    "version": "1.0.0",
+    "description": "Landing page for natures",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "compile:sass": "node-sass ./sass/main.scss ./css/style.css -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ArpitFalcon/NatoursWebsite.git"
+    },
+    "author": "Arpit",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ArpitFalcon/NatoursWebsite/issues"
+    },
+    "homepage": "https://github.com/ArpitFalcon/NatoursWebsite#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "node-sass": "^4.14.1"
+    }
 }
