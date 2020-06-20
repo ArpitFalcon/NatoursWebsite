@@ -2,9 +2,9 @@
 /* MAIN FILE - FOR IMPORTS */
 /* -------------------------------------------------------- */
 
+@import "./abstract/variable";
 @import "./abstract/functions";
 @import "./abstract/mixins";
-@import "./abstract/variable";
 
 @import "./base/base";
 @import "./base/animations";
@@ -16,4 +16,4 @@
 @import "./layout/header";
 @import "./layout/grid";
 
-@import "./pages/home.scss";
+@import "./pages/home";
