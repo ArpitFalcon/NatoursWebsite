@@ -96,19 +96,19 @@ body {
 }
 
 /* Logo */
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
     width: auto;
 }
 
 /* Heading */
-.text-box {
+.header__text-box {
     /* This is in relation to the parent element */
     position: absolute;
     top: 40%;
@@ -129,7 +129,7 @@ body {
     backface-visibility: hidden;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -144,7 +144,7 @@ body {
     /* animation-delay: 2s; Delay in animation start*/
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -184,7 +184,7 @@ body {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -202,7 +202,7 @@ body {
     transition: all 0.4s;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -211,7 +211,7 @@ body {
     opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInButton 0.5s ease-out 0.75s;
 
     /* Styles of 0% time is applied before the animation in the element. */
