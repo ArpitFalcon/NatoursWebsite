@@ -33,6 +33,7 @@
     }
   }
 
+  // Single scale up, rest of them scale down.
   &:hover &__photo:not(:hover) {
     transform: scale(0.95);
   }
