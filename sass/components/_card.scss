@@ -1,0 +1,51 @@
+.card {
+  // Perspective has to be put up in parent element. New property
+  // Not clear how values are but lower the value, high the drama.
+  // So make it high and experiment.
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+
+  // The height is collapsing due to the absolute positioning.
+  // Can't use clear fix since it is not float, so this.
+  height: 50rem;
+
+  position: relative;
+
+  &__side {
+    height: 50rem;
+    transition: all 0.8s ease;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // To make the card show only the part we are interested in.
+    // Research more into it.
+    backface-visibility: hidden;
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}
