@@ -4,6 +4,7 @@
 
 // ------- White Button ----------
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -11,13 +12,17 @@
     padding: 1.5rem 4rem;
     display: inline-block;
     border-radius: 10rem;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
 
     /* Easy and not so effective way to do animation. */
     transition: all 0.2s;
 
     /* Absolute positioning need a relative place to point to  */
     position: relative;
+
+    // Change the <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -30,7 +35,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
