@@ -13,22 +13,26 @@
 html {
   /* font-size is 10px since the default is 16px. 10px to make the calculation for "rem" easier  */
   // Defines what 1rem is. //
-  font-size: 65.5%;
+  font-size: 65.5%; // 1 rem = 10px;
 
-  @include respond(phone) {
-    font-size: 50%;
+  @include respond(tab-land) {
+    // width < 1200px
+    font-size: 56.25%; // 1 rem = 9 px , 9 / 16 = 56.25
   }
   @include respond(tab-port) {
-    font-size: 60%;
-  }
-  @include respond(tab-land) {
-    font-size: 70%;
+    // width < 900px
+    font-size: 50%; // 1 rem = 8px , 8 / 16 = 50%
   }
   @include respond(big-desktop) {
-    font-size: 80%;
+    // width > 1800px
+    font-size: 75%; // 1 rem = 12, 12 / 16 = 75
   }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
