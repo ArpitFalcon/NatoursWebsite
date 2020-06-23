@@ -3,7 +3,7 @@
 /* -------------------------------------------------------- */
 
 .header {
-  height: 95vh;
+  height: 85vh;
   background-image: linear-gradient(
       to right,
       rgba($color-primary-light, 0.8),
@@ -14,11 +14,15 @@
   background-position: top;
   position: relative;
 
-  /* Making the wedge - Put the co-ordinates in the parameters
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    height: 95vh;
+
+    /* Making the wedge - Put the co-ordinates in the parameters
     Starting from top left as origin
     Use the clipy website to get some pre-made shapes */
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
 
   // If the dpi is more than 192 and also the screen size is more than 600px
   // or the screen size is more than 2000px. "," means "or" here.
