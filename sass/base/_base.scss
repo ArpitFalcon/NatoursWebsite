@@ -5,17 +5,30 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    /* font-size is 10px since the default is 16px. 10px to make the calculation for "rem" easier  */
-    // Defines what 1rem is. //
-    font-size: 65.5%;
+  /* font-size is 10px since the default is 16px. 10px to make the calculation for "rem" easier  */
+  // Defines what 1rem is. //
+  font-size: 65.5%;
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
+  @include respond(tab-port) {
+    font-size: 60%;
+  }
+  @include respond(tab-land) {
+    font-size: 70%;
+  }
+  @include respond(big-desktop) {
+    font-size: 80%;
+  }
 }
 
 body {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
