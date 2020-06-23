@@ -26,9 +26,9 @@
 
   // If the dpi is more than 192 and also the screen size is more than 600px
   // or the screen size is more than 2000px. "," means "or" here.
-  @media (min-resolution: 192dpi) and (min-width: 37.5em),
-    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5rem),
-    (min-width: 125em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5rem),
+    only screen and (min-width: 125em) {
     background-image: linear-gradient(
         to right,
         rgba($color-primary-light, 0.8),
